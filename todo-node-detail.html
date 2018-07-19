@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国港湾工程有限责任公司投票报价管理系统</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <!-- Data Tables -->
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <!--datapicker-->
+    <link href="css/plugins/datetimepicker/datetimepicker.min.css" rel="stylesheet"><!--datapicker-->
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title bg-primary">
+                        <h5>分部填报申请</h5>
+                    </div>
+                    <div class="ibox-title">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <button class="btn btn-primary">流程图</button>
+                                <button class="btn btn-primary">传阅</button>
+                                <button class="btn btn-primary">退回</button>
+                            </div>
+                            <div class="col-xs-6 text-right">
+                                <button class="btn btn-primary">处理列表</button>
+                                <a href="todo-detail.html" class="btn btn-primary">返回</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <table class="table table-hover table-bordered text-center" style="margin-bottom: 0;">
+                            <tr>
+                                <td><strong>节点名称</strong></td>
+                                <td>法律尽调</td>
+                                <td><strong>排列序号</strong></td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>节点牵头人</strong></td>
+                                <td>李四</td>
+                                <td><strong>节点成员</strong></td>
+                                <td>张三、王五</td>
+                            </tr>
+                            <tr>
+                                <td><strong>预计开始时间</strong></td>
+                                <td>2018-01-01</td>
+                                <td><strong>预计结束时间</strong></td>
+                                <td>2018-06-01</td>
+                            </tr>
+                            <tr>
+                                <td><strong>实际开始时间</strong></td>
+                                <td>2018-01-01</td>
+                                <td><strong>实际结束时间</strong></td>
+                                <td>2018-06-01</td>
+                            </tr>
+                            <tr>
+                                <td><strong>状态</strong></td>
+                                <td>进行中</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <table class="table table-hover table-bordered text-center"style="margin-bottom: 0;">
+                            <tr class="success">
+                                <td><strong>工作进展</strong></td>
+                                <td colspan="6" class="text-right">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 全部
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 成果
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 过程
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>序号</strong></td>
+                                <td><strong>填写时间</strong></td>
+                                <td><strong>姓名</strong></td>
+                                <td colspan="2"><strong>进展描述</strong></td>
+                                <td><strong>状态</strong></td>
+                                <td><strong>操作</strong></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2018-06-08</td>
+                                <td>李四</td>
+                                <td colspan="2">完成终稿</td>
+                                <td>成果</td>
+                                <td>
+                                    <button class="btn btn-primary btn-xs">编辑</button>
+                                    <button class="btn btn-danger btn-xs">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2018-06-08</td>
+                                <td>李四</td>
+                                <td colspan="2">完成终稿</td>
+                                <td>成果</td>
+                                <td>
+                                    <button class="btn btn-primary btn-xs">编辑</button>
+                                    <button class="btn btn-danger btn-xs">删除</button>
+                                </td>
+                            </tr>
+                            <tr class="success">
+                                <td><strong>存在问题</strong></td>
+                                <td colspan="6" class="text-right">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 全部
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 已解决
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 未解决
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>序号</strong></td>
+                                <td><strong>填写时间</strong></td>
+                                <td><strong>姓名</strong></td>
+                                <td><strong>问题描述</strong></td>
+                                <td><strong>解决方案</strong></td>
+                                <td><strong>状态</strong></td>
+                                <td><strong>操作</strong></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2018-06-08</td>
+                                <td>李四</td>
+                                <td>测试</td>
+                                <td>测试</td>
+                                <td>未解决</td>
+                                <td>
+                                    <button class="btn btn-primary btn-xs">编辑</button>
+                                    <button class="btn btn-danger btn-xs">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2018-06-08</td>
+                                <td>李四</td>
+                                <td>测试</td>
+                                <td>测试</td>
+                                <td>未解决</td>
+                                <td>
+                                    <button class="btn btn-primary btn-xs">编辑</button>
+                                    <button class="btn btn-danger btn-xs">删除</button>
+                                </td>
+                            </tr>
+                            <tr class="success">
+                                <td><strong>业务对接单位</strong></td>
+                                <td colspan="6" class="text-right"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>序号</strong></td>
+                                <td colspan="2"><strong>业务对接单位</strong></td>
+                                <td><strong>业务对接人</strong></td>
+                                <td colspan="2"><strong>联系方式</strong></td>
+                                <td><strong>操作</strong></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td colspan="2">北京中恒远策信息咨询有限公司</td>
+                                <td>金香淑</td>
+                                <td colspan="2">电话：010-65661992; 邮箱：topbrain@188.com</td>
+                                <td>
+                                    <button class="btn btn-primary btn-xs">编辑</button>
+                                    <button class="btn btn-danger btn-xs">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td colspan="2">北京中恒远策信息咨询有限公司</td>
+                                <td>金香淑</td>
+                                <td colspan="2">电话：010-65661992; 邮箱：topbrain@188.com</td>
+                                <td>
+                                    <button class="btn btn-primary btn-xs">编辑</button>
+                                    <button class="btn btn-danger btn-xs">删除</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table table-hover table-bordered text-center" style="margin-bottom: 0;">
+                            <tr>
+                                <td rowspan="3"><strong>相关文件</strong></td>
+                                <td><strong>内部文件</strong></td>
+                                <td colspan="2"></td>
+                                <td><strong>外部文件</strong></td>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>上传人</strong></td>
+                                <td><strong>上传时间</strong></td>
+                                <td><strong>附件</strong></td>
+                                <td><strong>上传人</strong></td>
+                                <td><strong>上传时间</strong></td>
+                                <td><strong>附件</strong></td>
+                            </tr>
+                            <tr>
+                                <td>张三</td>
+                                <td>2018-06-15</td>
+                                <td>
+                                    <button class="btn btn-danger btn-xs">删除</button>
+                                    <a href="#">abc.pdf</a>
+                                </td>
+                                <td>李四</td>
+                                <td>2018-06-15</td>
+                                <td>
+                                    <button class="btn btn-danger btn-xs">删除</button>
+                                    <a href="#">abc.pdf</a>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table table-hover table-bordered text-center">
+                            <tr>
+                                <td rowspan="3"><strong>子节点信息</strong></td>
+                                <td><strong>排列序号</strong></td>
+                                <td><strong>节点名称</strong></td>
+                                <td><strong>预计开始时间</strong></td>
+                                <td><strong>预计完成时间</strong></td>
+                                <td><strong>实际开始时间</strong></td>
+                                <td><strong>实际完成时间</strong></td>
+                                <td><strong>状态</strong></td>
+                                <td><strong></strong></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>初稿</td>
+                                <td>2018-06-01</td>
+                                <td>2018-06-01</td>
+                                <td>2018-06-01</td>
+                                <td>2018-06-01</td>
+                                <td>已完成</td>
+                                <td>
+                                    <button class="btn btn-danger btn-xs">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>第一次修改稿</td>
+                                <td>2018-06-01</td>
+                                <td>2018-06-01</td>
+                                <td>2018-06-01</td>
+                                <td>2018-06-01</td>
+                                <td>进行中</td>
+                                <td>
+                                    <button class="btn btn-danger btn-xs">删除</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="text-center">
+                            <a href="todo-detail.html" class="btn btn-primary">返回</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!-- dataTables -->
+    <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <script src="js/contabs-sub.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>
