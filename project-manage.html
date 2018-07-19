@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国港湾工程有限责任公司投票报价管理系统</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <!-- Data Tables -->
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <!--datapicker-->
+    <link href="css/plugins/datetimepicker/datetimepicker.min.css" rel="stylesheet"><!--datapicker-->
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="ibox float-e-margins margin-top">
+            <div class="ibox-content">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-2">
+                            <p class="form-control-static text-right">项目名称</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="请输入项目名称">
+                        </div>
+                        <div class="col-sm-2">
+                            <p class="form-control-static text-right">项目英文名称</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="请输入项目英文名称">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2">
+                            <p class="form-control-static text-right">项目领域</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="港口">港口</option>
+                                <option value="土地开发">土地开发</option>
+                                <option value="电力能源">电力能源</option>
+                                <option value="其它基础设施">其它基础设施</option>
+                                <option value="收并购">收并购</option>
+                                <option value="其它类">其它类</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2">
+                            <p class="form-control-static text-right">国别</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <select name="" id="" class="form-control">
+                                <option value="斯里兰卡">斯里兰卡</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2">
+                            <p class="form-control-static text-right">项目阶段</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <select name="" id="" class="form-control">
+                                <option value="中港立项">中港立项</option>
+                                <option value="中交立项">中交立项</option>
+                                <option value="中港决策">中港决策</option>
+                                <option value="中交决策">中交决策</option>
+                                <option value="已实施">已实施</option>
+                                <option value="已运营">已运营</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2">
+                            <p class="form-control-static text-right">资金来源</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <select name="" id="" class="form-control">
+                                <option value="业主自筹">业主自筹</option>
+                                <option value="国内银行商贷">国内银行商贷</option>
+                                <option value="其它国际金融组织贷款">其它国际金融组织贷款</option>
+                                <option value="业主自由资金">业主自由资金</option>
+                                <option value="政府经援">政府经援</option>
+                                <option value="中国资金支持">中国资金支持</option>
+                                <option value="一揽子合作项目">一揽子合作项目</option>
+                                <option value="丝路资金">丝路资金</option>
+                                <option value="其它（主权基金、中非基金、中欧基金等）">其它（主权基金、中非基金、中欧基金等）</option>
+                                <option value="企业投资（含投资启动）">企业投资（含投资启动）</option>
+                                <option value="中方主导的多方/区域金融组织贷款">中方主导的多方/区域金融组织贷款</option>
+                                <option value="优买">优买</option>
+                                <option value="亚投行">亚投行</option>
+                                <option value="金砖国家银行">金砖国家银行</option>
+                                <option value="上合组织银行">上合组织银行</option>
+                                <option value="资产证券化等多元融资">资产证券化等多元融资</option>
+                                <option value="其它资金来源">其它资金来源</option>
+                                <option value="优贷">优贷</option>
+                                <option value="商贷">商贷</option>
+                                <option value="亚行贷款">亚行贷款</option>
+                                <option value="非洲银行贷款">非洲银行贷款</option>
+                                <option value="世行贷款">世行贷款</option>
+                                <option value="其它">其它</option>
+                                <option value="政府框架内优惠贷款">政府框架内优惠贷款</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2">
+                            <p class="form-control-static text-right">融资协议</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <select name="" id="" class="form-control">
+                                <option value="已签署">已签署</option>
+                                <option value="已确定未签署">已确定未签署</option>
+                                <option value="未确定">未确定</option>
+                                <option value="未到融资阶段">未到融资阶段</option>
+                                <option value="不需要融资">不需要融资</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-info">查询</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content table-responsive">
+                        <table class="table table-striped table-bordered table-hover text-center" id="sample-table" style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th width="40">序号</th>
+                                    <th>项目编号</th>
+                                    <th>项目名称</th>
+                                    <th>项目英文名称</th>
+                                    <th width="100">项目领域</th>
+                                    <th width="100">项目基本信息</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="gradeX">
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">BD-IP-02-2015</td>
+                                    <td class="text-center"><a href="project-detail.html">孟加拉吉大港中国经济工业园区项目工作进展情况</a></td>
+                                    <td class="text-center">Chinese Economic and Industrial Zone, Chittagong, Bangladesh</td>
+                                    <td>土地开发</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="gradeX">
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">BD-IP-02-2015</td>
+                                    <td class="text-center">
+                                        <a href="project-detail.html">哥伦比亚马道斯高速公路PPP项目工作进展情况</a></td>
+                                    <td class="text-center">Chinese Economic and Industrial Zone, Chittagong, Bangladesh</td>
+                                    <td>土地开发</td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!-- dataTables -->
+    <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <script src="js/contabs-sub.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('.del-btn').click(function () {
+                parent.layer.confirm('确定删除这条记录吗？', {
+                    title: '确定删除',
+                    btn: ['确定','取消'], //按钮
+                    shade: false //不显示遮罩
+                }, function(){
+                    parent.layer.msg('删除成功', {icon: 1});
+                }, function(){
+                    console.log('取消')
+                });
+            })
+
+            $("#sample-table").dataTable({
+                'ordering': false,
+                'searching': false,
+                'autoWidth': true
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
