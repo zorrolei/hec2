@@ -23,37 +23,25 @@
     <style>
         .swiper-container {
             width: 800px;
-            height: 120px;
-            background:url('http://imgdn5.soufunimg.com/2016/03/21/bj/gebz/3d33fd47a2048d00a99c327012d1e6f4/img/dot.gif') left 45px repeat-x;
+            height: 140px;
+            background:url('img/dot.gif') left center repeat-x;
         }
         .swiper-slide {
             text-align: center;
             font-size: 12px;
+            background:url('img/biggerdot.png') center center no-repeat;
+        }
+        .timeline-title{
+            border: 1px solid #ccc;
 
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
         }
-        /* timeline */
-        #timeline{overflow:hidden;margin:50px auto;position:relative;background:url('http://imgdn5.soufunimg.com/2016/03/21/bj/gebz/3d33fd47a2048d00a99c327012d1e6f4/img/dot.gif') left 45px repeat-x;}
-        #dates{width:800px;height:120px;overflow:hidden;}
-        #dates li{
-            list-style:none;float:left;width:90px;height:60px;font-size:12px;text-align:center;
+        .timeline-content{
+            border: 1px solid #ccc;
+            border-top: none;
         }
-        #dates li:nth-child(odd){
-            padding-bottom: 10px;background:url('http://imgdn5.soufunimg.com/2016/03/21/bj/gebz/3d33fd47a2048d00a99c327012d1e6f4/img/biggerdot.png') center bottom no-repeat;}
-        #dates li:nth-child(even){
-            margin-top: 43px;background:url('http://imgdn5.soufunimg.com/2016/03/21/bj/gebz/3d33fd47a2048d00a99c327012d1e6f4/img/biggerdot.png') center top no-repeat;}
+        .swiper-slide:nth-child(even) .timeline-title{
+            margin-top: 80px;
+        }
     </style>
 
 </head>
@@ -65,7 +53,7 @@
             <h5>项目信息</h5>
         </div>
         <div class="ibox-content">
-            <table class="table table-hover table-bordered text-center">
+            <table class="table table-bordered text-center">
                 <tr>
                     <td><strong>项目名称</strong></td>
                     <td>孟加拉吉大港中国经济工业园区项目工作进展情况</td>
@@ -182,7 +170,99 @@
                 </tr>
                 <tr>
                     <td rowspan="2"><strong>生命节点图</strong></td>
-                    <td colspan="3">流程图</td>
+                    <td colspan="3">
+                        <!--时间轴-->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="timeline-title bg-info">1、集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实:2016-11-04
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title bg-info">2、法律尽调</div>
+                                    <div class="timeline-content">
+                                        预:<br>实:2017-04-04
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title bg-info">3、股东协议签署</div>
+                                    <div class="timeline-content">
+                                        预:<br>实:2017-06-15
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title bg-info">4、可研</div>
+                                    <div class="timeline-content">
+                                        预:2017-06-01<br>实:2017-08-07
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title bg-info">5、控股架构</div>
+                                    <div class="timeline-content">
+                                        预:<br>实:2017-08-29
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title bg-info">6、产业规划</div>
+                                    <div class="timeline-content">
+                                        预:2017-12-31<br>实:2018-01-22
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title">7、税务尽调</div>
+                                    <div class="timeline-content">
+                                        预:2018-01-05<br>实:
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title">8、预招商</div>
+                                    <div class="timeline-content">
+                                        预:2018-04-01<br>实:
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title bg-danger">9、财务模型</div>
+                                    <div class="timeline-content">
+                                        预:2018-04-01<br>实:
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title bg-danger">10、控详规</div>
+                                    <div class="timeline-content">
+                                        预:2018-05-01<br>实:
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title bg-danger">11、集团决策</div>
+                                    <div class="timeline-content">
+                                        预:2018-05-01<br>实:
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title bg-danger">12、部委报备报批</div>
+                                    <div class="timeline-content">
+                                        预:2018-05-01<br>实:
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title bg-danger">13、项目公司成立</div>
+                                    <div class="timeline-content">
+                                        预:2018-06-01<br>实:
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title">14、特经协议签署</div>
+                                    <div class="timeline-content">
+                                        预:2018-06-01<br>实:
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center margin-top text-danger">左右拖动查看更多</div>
+                        <!--时间轴-->
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="3">
@@ -200,7 +280,37 @@
                 </tr>
                 <tr>
                     <td colspan="3">
-                        流程图
+                        <!--时间轴-->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="timeline-title bg-info">1、初稿</div>
+                                    <div class="timeline-content">
+                                        预:2017-10-31<br>实:2017-10-31
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title bg-info">2、第一次修改稿</div>
+                                    <div class="timeline-content">
+                                        预:2017-12-01<br>实:2017-12-08
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title bg-info">3、终稿</div>
+                                    <div class="timeline-content">
+                                        预:2017-12-31<br>实:2018-01-22
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title bg-info">&nbsp;</div>
+                                    <div class="timeline-content">
+                                        预:2017-12-31<br>实:2018-01-22
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center margin-top text-danger">左右拖动查看更多</div>
+                        <!--时间轴-->
                     </td>
                 </tr>
                 <tr>
@@ -319,119 +429,36 @@
                 </tr>
                 <tr>
                     <td colspan="3">
+                        <!--时间轴-->
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-title bg-info">1、初稿</div>
                                     <div class="timeline-content">
-                                        预:<br>实：2016-11-04
+                                        预:2017-10-31<br>实:2017-10-31
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-title bg-info">2、第一次修改稿</div>
                                     <div class="timeline-content">
-                                        预:<br>实：2016-11-04
+                                        预:2017-12-01<br>实:2017-12-08
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-title bg-info">3、终稿</div>
                                     <div class="timeline-content">
-                                        预:<br>实：2016-11-04
+                                        预:2017-12-31<br>实:2018-01-22
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title bg-info">&nbsp;</div>
+                                    <div class="timeline-content">
+                                        预:2017-12-31<br>实:2018-01-22
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                        <!--时间轴-->
-                        <div id="timeline">
-                            <ul id="dates">
-                                <li>
-                                    <div class="timeline-title">1集团立项</div>
-                                    <div class="timeline-content">
-                                        预:<br>实：2016-11-04
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-title">1集团立项</div>
-                                    <div class="timeline-content">
-                                        预:<br>实：2016-11-04
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-title">1集团立项</div>
-                                    <div class="timeline-content">
-                                        预:<br>实：2016-11-04
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-title">1集团立项</div>
-                                    <div class="timeline-content">
-                                        预:<br>实：2016-11-04
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-title">1集团立项</div>
-                                    <div class="timeline-content">
-                                        预:<br>实：2016-11-04
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-title">1集团立项</div>
-                                    <div class="timeline-content">
-                                        预:<br>实：2016-11-04
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-title">1集团立项</div>
-                                    <div class="timeline-content">
-                                        预:<br>实：2016-11-04
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-title">1集团立项</div>
-                                    <div class="timeline-content">
-                                        预:<br>实：2016-11-04
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-title">1集团立项</div>
-                                    <div class="timeline-content">
-                                        预:<br>实：2016-11-04
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-title">1集团立项</div>
-                                    <div class="timeline-content">
-                                        预:<br>实：2016-11-04
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-title">1集团立项</div>
-                                    <div class="timeline-content">
-                                        预:<br>实：2016-11-04
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-title">1集团立项</div>
-                                    <div class="timeline-content">
-                                        预:<br>实：2016-11-04
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-title">1集团立项</div>
-                                    <div class="timeline-content">
-                                        预:<br>实：2016-11-04
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-title">1集团立项</div>
-                                    <div class="timeline-content">
-                                        预:<br>实：2016-11-04
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
+                        <div class="text-center margin-top text-danger">左右拖动查看更多</div>
                         <!--时间轴-->
                     </td>
                 </tr>
@@ -575,8 +602,9 @@
             'autoWidth': true
         });
         var mySwiper = new Swiper ('.swiper-container', {
-            slidesPerView: 3,
+            slidesPerView: 8,
             spaceBetween: 0,
+            grabCursor: true,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
