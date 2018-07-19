@@ -46,31 +46,45 @@
                         <table class="table table-hover table-bordered text-center" style="margin-bottom: 0;">
                             <tr>
                                 <td><strong>节点名称</strong></td>
-                                <td>法律尽调</td>
+                                <td>
+                                    <input type="text" class="form-control" value="法律尽调">
+                                </td>
                                 <td><strong>排列序号</strong></td>
-                                <td>1</td>
+                                <td>
+                                    <input type="text" class="form-control" value="1">
+                                </td>
                             </tr>
                             <tr>
                                 <td><strong>节点牵头人</strong></td>
-                                <td>李四</td>
+                                <td>
+                                    <input type="text" class="form-control" value="李四">
+                                </td>
                                 <td><strong>节点成员</strong></td>
-                                <td>张三、王五</td>
+                                <td>
+                                    <input type="text" class="form-control" value="张三、王五">
+                                </td>
                             </tr>
                             <tr>
                                 <td><strong>预计开始时间</strong></td>
-                                <td>2018-01-01</td>
+                                <td>
+                                    <input type="text" class="form-control datetimepicker2" placeholder="请选择日期">
+                                </td>
                                 <td><strong>预计结束时间</strong></td>
-                                <td>2018-06-01</td>
+                                <td><input type="text" class="form-control datetimepicker2" placeholder="请选择日期"></td>
                             </tr>
                             <tr>
                                 <td><strong>实际开始时间</strong></td>
-                                <td>2018-01-01</td>
+                                <td><input type="text" class="form-control datetimepicker2" placeholder="请选择日期"></td>
                                 <td><strong>实际结束时间</strong></td>
-                                <td>2018-06-01</td>
+                                <td><input type="text" class="form-control datetimepicker2" placeholder="请选择日期"></td>
                             </tr>
                             <tr>
                                 <td><strong>状态</strong></td>
-                                <td>进行中</td>
+                                <td class="form-inline text-left">
+                                    <select name="" id="" class="form-control">
+                                        <option value="进行中">进行中</option>
+                                    </select>
+                                </td>
                                 <td></td>
                                 <td></td>
                             </tr>
@@ -101,9 +115,13 @@
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td>2018-06-08</td>
-                                <td>李四</td>
-                                <td colspan="2">完成终稿</td>
+                                <td><input type="text" class="form-control datetimepicker2" placeholder="请选择日期"></td>
+                                <td>
+                                    <input type="text" class="form-control" value="李四">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" value="完成终稿">
+                                </td>
                                 <td>
                                     <select name="" id="" class="form-control">
                                         <option selected="" value="成果">成果</option>
@@ -117,9 +135,13 @@
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td>2018-06-08</td>
-                                <td>张三</td>
-                                <td colspan="2">完成第一次修改稿</td>
+                                <td><input type="text" class="form-control datetimepicker2" placeholder="请选择日期"></td>
+                                <td>
+                                    <input type="text" class="form-control" value="张三">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" value="完成第一次修改稿">
+                                </td>
                                 <td>过程</td>
                                 <td>
                                     <button class="btn btn-primary btn-xs">编辑</button>
@@ -152,10 +174,18 @@
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td>2018-06-08</td>
-                                <td>李四</td>
-                                <td>测试</td>
-                                <td>测试</td>
+                                <td>
+                                    <input type="text" class="form-control datetimepicker2" placeholder="请选择日期">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" value="李四">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" value="测试">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" value="测试">
+                                </td>
                                 <td>
                                     <select name="" id="" class="form-control">
                                         <option selected="" value="未解决">未解决</option>
@@ -169,11 +199,22 @@
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td>2018-06-08</td>
-                                <td>张三</td>
-                                <td>问题描述11111</td>
-                                <td>解决方案11111</td>
-                                <td>已解决</td>
+                                <td><input type="text" class="form-control datetimepicker2" placeholder="请选择日期"></td>
+                                <td>张三
+                                    <input type="text" class="form-control" value="张三">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" value="问题描述11111">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" value="解决方案11111">
+                                </td>
+                                <td>
+                                    <select name="" id="" class="form-control">
+                                        <option selected="" value="未解决">未解决</option>
+                                        <option value="已解决">已解决</option>
+                                    </select>
+                                </td>
                                 <td>
                                     <button class="btn btn-primary btn-xs">编辑</button>
                                     <button class="btn btn-danger btn-xs">删除</button>
@@ -194,9 +235,15 @@
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td colspan="2">北京中恒远策信息咨询有限公司</td>
-                                <td>金香淑</td>
-                                <td colspan="2">电话：010-65661992; 邮箱：topbrain@188.com</td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" value="北京中恒远策信息咨询有限公司">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" value="金香淑">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" value="电话：010-65661992; 邮箱：topbrain@188.com">
+                                </td>
                                 <td>
                                     <button class="btn btn-primary btn-xs">编辑</button>
                                     <button class="btn btn-danger btn-xs">删除</button>
@@ -204,9 +251,15 @@
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td colspan="2">北京中恒远策信息咨询有限公司</td>
-                                <td>金香淑</td>
-                                <td colspan="2">电话：010-65661992; 邮箱：topbrain@188.com</td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" value="北京中恒远策信息咨询有限公司">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" value="金香淑">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" value="电话：010-65661992; 邮箱：topbrain@188.com">
+                                </td>
                                 <td>
                                     <button class="btn btn-primary btn-xs">编辑</button>
                                     <button class="btn btn-danger btn-xs">删除</button>
@@ -234,15 +287,23 @@
                                 <td><strong>附件</strong></td>
                             </tr>
                             <tr>
-                                <td>张三</td>
-                                <td>2018-06-15</td>
                                 <td>
+                                    <input type="text" class="form-control" value="张三">
+                                </td>
+                                <td><input type="text" class="form-control datetimepicker2" placeholder="请选择日期"></td>
+                                <td>
+                                    <button class="btn btn-primary btn-xs" type="button" onclick="$('input[id=lefile1]').click();">上传</button>
+                                    <input id="lefile1" type="file" style="display:none">
                                     <button class="btn btn-danger btn-xs">删除</button>
                                     <a href="#">abc.pdf</a>
                                 </td>
-                                <td>李四</td>
-                                <td>2018-06-15</td>
                                 <td>
+                                    <input type="text" class="form-control" value="李四">
+                                </td>
+                                <td><input type="text" class="form-control datetimepicker2" placeholder="请选择日期"></td>
+                                <td>
+                                    <button class="btn btn-primary btn-xs" type="button" onclick="$('input[id=lefile2]').click();">上传</button>
+                                    <input id="lefile2" type="file" style="display:none">
                                     <button class="btn btn-danger btn-xs">删除</button>
                                     <a href="#">abc.pdf</a>
                                 </td>
@@ -277,16 +338,16 @@
                                     <input type="text" class="form-control input-sm" placeholder="第一次修改稿">
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control input-sm" placeholder="2018-06-01">
+                                    <input type="text" class="form-control datetimepicker2" placeholder="请选择日期">
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control input-sm" placeholder="2018-06-01">
+                                    <input type="text" class="form-control datetimepicker2" placeholder="请选择日期">
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control input-sm" placeholder="2018-06-01">
+                                    <input type="text" class="form-control datetimepicker2" placeholder="请选择日期">
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control input-sm" placeholder="2018-06-01">
+                                    <input type="text" class="form-control datetimepicker2" placeholder="请选择日期">
                                 </td>
                                 <td>
                                     <select name="" id="" class="form-control">
@@ -325,12 +386,21 @@
     <script src="js/content.js?v=1.0.0"></script>
     <script src="js/contabs-sub.js"></script>
     <script src="js/plugins/layer/layer.min.js"></script>
+    <!-- Data picker -->
+    <script src="js/plugins/datetimepicker/datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/plugins/datetimepicker/datetimepicker.zh-CN.js" charset="UTF-8"></script>
     <script>
         $(document).ready(function () {
             $('.save-btn').click(function () {
                 layer.msg('保存成功');
             })
-
+            $('.datetimepicker2').datetimepicker({
+                format: 'yyyy-mm-dd',
+                autoclose:true,
+                todayBtn:'linked',
+                language:'zh-CN',
+                minView:2
+            })
 
         });
     </script>
