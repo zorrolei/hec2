@@ -7,209 +7,586 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>中国港湾工程有限责任公司投票报价管理系统</title>
 
-    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
     <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
 
     <!-- Data Tables -->
     <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
     <!--datapicker-->
-    <link href="css/plugins/datetimepicker/datetimepicker.min.css" rel="stylesheet"><!--datapicker-->
+    <link href="css/plugins/datetimepicker/datetimepicker.min.css" rel="stylesheet">
+    <!--swiper-->
+    <link href="css/plugins/swiper/swiper-3.4.2.min.css" rel="stylesheet">
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <style>
+        .swiper-container {
+            width: 800px;
+            height: 120px;
+            background:url('http://imgdn5.soufunimg.com/2016/03/21/bj/gebz/3d33fd47a2048d00a99c327012d1e6f4/img/dot.gif') left 45px repeat-x;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 12px;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        /* timeline */
+        #timeline{overflow:hidden;margin:50px auto;position:relative;background:url('http://imgdn5.soufunimg.com/2016/03/21/bj/gebz/3d33fd47a2048d00a99c327012d1e6f4/img/dot.gif') left 45px repeat-x;}
+        #dates{width:800px;height:120px;overflow:hidden;}
+        #dates li{
+            list-style:none;float:left;width:90px;height:60px;font-size:12px;text-align:center;
+        }
+        #dates li:nth-child(odd){
+            padding-bottom: 10px;background:url('http://imgdn5.soufunimg.com/2016/03/21/bj/gebz/3d33fd47a2048d00a99c327012d1e6f4/img/biggerdot.png') center bottom no-repeat;}
+        #dates li:nth-child(even){
+            margin-top: 43px;background:url('http://imgdn5.soufunimg.com/2016/03/21/bj/gebz/3d33fd47a2048d00a99c327012d1e6f4/img/biggerdot.png') center top no-repeat;}
+    </style>
 
 </head>
 
 <body class="gray-bg">
-    <div class="wrapper wrapper-content">
-        <div class="ibox float-e-margins margin-top">
-            <div class="ibox-title">
-                <h5>添加管理员</h5>
-            </div>
-            <div class="ibox-content">
-                <div class="form-horizontal">
-                    <div class="form-group">
-                        <div class="col-sm-2">
-                            <p class="form-control-static text-right">项目名称</p>
-                        </div>
-                        <div class="col-sm-4">
-                            <input type="email" class="form-control" id="inputEmail3" placeholder="请输入项目名称">
-                        </div>
-                        <div class="col-sm-2">
-                            <p class="form-control-static text-right">项目英文名称</p>
-                        </div>
-                        <div class="col-sm-4">
-                            <input type="email" class="form-control" id="inputEmail3" placeholder="请输入项目英文名称">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-2">
-                            <p class="form-control-static text-right">项目领域</p>
-                        </div>
-                        <div class="col-sm-4">
-                            <select name="" id="" class="form-control">
-                                <option selected="" value="港口">港口</option>
-                                <option value="土地开发">土地开发</option>
-                                <option value="电力能源">电力能源</option>
-                                <option value="其它基础设施">其它基础设施</option>
-                                <option value="收并购">收并购</option>
-                                <option value="其它类">其它类</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-2">
-                            <p class="form-control-static text-right">国别</p>
-                        </div>
-                        <div class="col-sm-4">
-                            <select name="" id="" class="form-control">
-                                <option value="斯里兰卡">斯里兰卡</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-2">
-                            <p class="form-control-static text-right">项目阶段</p>
-                        </div>
-                        <div class="col-sm-4">
-                            <select name="" id="" class="form-control">
-                                <option value="中港立项">中港立项</option>
-                                <option value="中交立项">中交立项</option>
-                                <option value="中港决策">中港决策</option>
-                                <option value="中交决策">中交决策</option>
-                                <option value="已实施">已实施</option>
-                                <option value="已运营">已运营</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-2">
-                            <p class="form-control-static text-right">资金来源</p>
-                        </div>
-                        <div class="col-sm-4">
-                            <select name="" id="" class="form-control">
-                                <option value="业主自筹">业主自筹</option>
-                                <option value="国内银行商贷">国内银行商贷</option>
-                                <option value="其它国际金融组织贷款">其它国际金融组织贷款</option>
-                                <option value="业主自由资金">业主自由资金</option>
-                                <option value="政府经援">政府经援</option>
-                                <option value="中国资金支持">中国资金支持</option>
-                                <option value="一揽子合作项目">一揽子合作项目</option>
-                                <option value="丝路资金">丝路资金</option>
-                                <option value="其它（主权基金、中非基金、中欧基金等）">其它（主权基金、中非基金、中欧基金等）</option>
-                                <option value="企业投资（含投资启动）">企业投资（含投资启动）</option>
-                                <option value="中方主导的多方/区域金融组织贷款">中方主导的多方/区域金融组织贷款</option>
-                                <option value="优买">优买</option>
-                                <option value="亚投行">亚投行</option>
-                                <option value="金砖国家银行">金砖国家银行</option>
-                                <option value="上合组织银行">上合组织银行</option>
-                                <option value="资产证券化等多元融资">资产证券化等多元融资</option>
-                                <option value="其它资金来源">其它资金来源</option>
-                                <option value="优贷">优贷</option>
-                                <option value="商贷">商贷</option>
-                                <option value="亚行贷款">亚行贷款</option>
-                                <option value="非洲银行贷款">非洲银行贷款</option>
-                                <option value="世行贷款">世行贷款</option>
-                                <option value="其它">其它</option>
-                                <option value="政府框架内优惠贷款">政府框架内优惠贷款</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-2">
-                            <p class="form-control-static text-right">融资协议</p>
-                        </div>
-                        <div class="col-sm-4">
-                            <select name="" id="" class="form-control">
-                                <option value="已签署">已签署</option>
-                                <option value="已确定未签署">已确定未签署</option>
-                                <option value="未确定">未确定</option>
-                                <option value="未到融资阶段">未到融资阶段</option>
-                                <option value="不需要融资">不需要融资</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="text-center">
-                        <button class="btn btn-info">查询</button>
-                    </div>
-                </div>
-            </div>
+<div class="wrapper wrapper-content">
+    <div class="ibox float-e-margins margin-top">
+        <div class="ibox-title">
+            <h5>项目信息</h5>
         </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="ibox float-e-margins">
-                    <div class="ibox-content table-responsive">
-                        <table class="table table-striped table-bordered table-hover text-center" id="sample-table" style="width: 100%;">
-                            <thead>
-                                <tr>
-                                    <th width="40">序号</th>
-                                    <th>项目编号</th>
-                                    <th>项目名称</th>
-                                    <th>项目英文名称</th>
-                                    <th width="100">项目领域</th>
-                                    <th width="100">项目基本信息</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="gradeX">
-                                    <td class="text-center">1</td>
-                                    <td class="text-center">BD-IP-02-2015</td>
-                                    <td class="text-center"><a href="project-detail.html">孟加拉吉大港中国经济工业园区项目工作进展情况</a></td>
-                                    <td class="text-center">Chinese Economic and Industrial Zone, Chittagong, Bangladesh</td>
-                                    <td>土地开发</td>
-                                    <td></td>
-                                </tr>
-                                <tr class="gradeX">
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">BD-IP-02-2015</td>
-                                    <td class="text-center">
-                                        <a href="project-detail.html">哥伦比亚马道斯高速公路PPP项目工作进展情况</a></td>
-                                    <td class="text-center">Chinese Economic and Industrial Zone, Chittagong, Bangladesh</td>
-                                    <td>土地开发</td>
-                                    <td></td>
-                                </tr>
-
-                            </tbody>
+        <div class="ibox-content">
+            <table class="table table-hover table-bordered text-center">
+                <tr>
+                    <td><strong>项目名称</strong></td>
+                    <td>孟加拉吉大港中国经济工业园区项目工作进展情况</td>
+                    <td><strong>项目英文名称</strong></td>
+                    <td>Chinese Economic and Industrial Zone, Chittagong, Bangladesh</td>
+                </tr>
+                <tr>
+                    <td><strong>项目编号</strong></td>
+                    <td>BD-IP-02-2015</td>
+                    <td><strong>入库建档时间</strong></td>
+                    <td>2015-05</td>
+                </tr>
+                <tr>
+                    <td><strong>项目状态</strong></td>
+                    <td>跟踪中</td>
+                    <td><strong></strong></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>项目领域</strong></td>
+                    <td>土地开发</td>
+                    <td><strong>所属区域中心</strong></td>
+                    <td>斯里兰卡</td>
+                </tr>
+                <tr>
+                    <td><strong>所在国家</strong></td>
+                    <td>孟加拉</td>
+                    <td><strong>总投资额</strong></td>
+                    <td>20,000万美元</td>
+                </tr>
+                <tr>
+                    <td><strong>中港资本金出资额</strong></td>
+                    <td>10,000万美元</td>
+                    <td><strong>中港股比</strong></td>
+                    <td>30%</td>
+                </tr>
+                <tr>
+                    <td><strong>项目预计IRR</strong></td>
+                    <td>9.70%</td>
+                    <td><strong>资本金预计IRR</strong></td>
+                    <td>12%</td>
+                </tr>
+                <tr>
+                    <td><strong>项目动态回收期</strong></td>
+                    <td>3年</td>
+                    <td><strong>项目静态回收期</strong></td>
+                    <td>3年</td>
+                </tr>
+                <tr>
+                    <td><strong>资本金动态回收期</strong></td>
+                    <td>3年</td>
+                    <td><strong>资本金静态回收期</strong></td>
+                    <td>3年</td>
+                </tr>
+                <tr>
+                    <td><strong>项目净现值</strong></td>
+                    <td>20,000万美元</td>
+                    <td><strong>折现率</strong></td>
+                    <td>9%</td>
+                </tr>
+                <tr>
+                    <td><strong>项目阶段</strong></td>
+                    <td>中港立项</td>
+                    <td><strong>资金来源</strong></td>
+                    <td>业主自筹</td>
+                </tr>
+                <tr>
+                    <td><strong>确定重点跟踪项目时间</strong></td>
+                    <td>2018-01-01 附件：<a href="#">abc.pdf</a></td>
+                    <td><strong>融资协议</strong></td>
+                    <td>已签署</td>
+                </tr>
+                <tr>
+                    <td><strong>港湾立项时间</strong></td>
+                    <td>2018-01-01 附件：<a href="#">abc.pdf</a></td>
+                    <td><strong>集团立项时间</strong></td>
+                    <td>2018-01-01 附件：<a href="#">abc.pdf</a></td>
+                </tr>
+                <tr>
+                    <td><strong>港湾决策时间</strong></td>
+                    <td>2018-01-01 附件：<a href="#">abc.pdf</a></td>
+                    <td><strong>集团决策时间</strong></td>
+                    <td>2018-01-01 附件：<a href="#">abc.pdf</a></td>
+                </tr>
+                <tr>
+                    <td rowspan="5"><strong>批复/备案时间</strong></td>
+                    <td><strong>部委</strong></td>
+                    <td><strong>时间</strong></td>
+                    <td><strong>附件列表</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>商务部</strong></td>
+                    <td>2018-01-01</td>
+                    <td><a href="#">abc.pdf</a></td>
+                </tr>
+                <tr>
+                    <td><strong>国资委</strong></td>
+                    <td>2018-01-01</td>
+                    <td><a href="#">abc.pdf</a></td>
+                </tr>
+                <tr>
+                    <td><strong>发改委</strong></td>
+                    <td>2018-01-01</td>
+                    <td><a href="#">abc.pdf</a></td>
+                </tr>
+                <tr>
+                    <td><strong>外管局</strong></td>
+                    <td>2018-01-01</td>
+                    <td><a href="#">abc.pdf</a></td>
+                </tr>
+                <tr>
+                    <td><strong>项目概要</strong></td>
+                    <td colspan="3">项目位于吉大港卡拉夫利河南岸地区，临近韩国工业园区。距离吉大港20公里。规划面积313公顷，定位为中国企业在当地专属的轻工业园区。</td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><strong>生命节点图</strong></td>
+                    <td colspan="3">流程图</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <p class="text-left">
+                            部委报备报批要求：<br>
+                            发改委：报备（根据《》第X条：XXX）<br>
+                            商务部：报批（根据《》第X条：XXX）<br>
+                            国资委：报批（根据《》第X条：XXX）
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="3"><strong>节点：<br/>控股架构计划图及简要说明</strong></td>
+                    <td colspan="3"><strong>计划图</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        流程图
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding: 0;">
+                        <table class="table table-hover table-bordered text-center" style="margin-bottom: 0;">
+                            <tr class="success">
+                                <td colspan="6"><strong>工作进展</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>序号</strong></td>
+                                <td><strong>填写时间</strong></td>
+                                <td><strong>姓名</strong></td>
+                                <td colspan="2"><strong>进展描述</strong></td>
+                                <td><strong>状态</strong></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2018-06-08</td>
+                                <td>李四</td>
+                                <td colspan="2">完成终稿</td>
+                                <td>成果</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2018-06-08</td>
+                                <td>李四</td>
+                                <td colspan="2">完成终稿</td>
+                                <td>成果</td>
+                            </tr>
+                            <tr class="success">
+                                <td colspan="6"><strong>存在问题</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>序号</strong></td>
+                                <td><strong>填写时间</strong></td>
+                                <td><strong>姓名</strong></td>
+                                <td><strong>问题描述</strong></td>
+                                <td><strong>解决方案</strong></td>
+                                <td><strong>状态</strong></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2018-06-08</td>
+                                <td>李四</td>
+                                <td>测试</td>
+                                <td>测试</td>
+                                <td>未解决</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2018-06-08</td>
+                                <td>李四</td>
+                                <td>测试</td>
+                                <td>测试</td>
+                                <td>未解决</td>
+                            </tr>
                         </table>
-                    </div>
-                </div>
+                        <table class="table table-hover table-bordered text-center" style="margin-bottom: 0;">
+                            <tr>
+                                <td rowspan="3"><strong>相关文件</strong></td>
+                                <td><strong>内部文件</strong></td>
+                                <td colspan="2"></td>
+                                <td><strong>外部文件</strong></td>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>上传人</strong></td>
+                                <td><strong>上传时间</strong></td>
+                                <td><strong>附件</strong></td>
+                                <td><strong>上传人</strong></td>
+                                <td><strong>上传时间</strong></td>
+                                <td><strong>附件</strong></td>
+                            </tr>
+                            <tr>
+                                <td>张三</td>
+                                <td>2018-06-15</td>
+                                <td>
+                                    <a href="#">abc.pdf</a>
+                                </td>
+                                <td>李四</td>
+                                <td>2018-06-15</td>
+                                <td>
+                                    <a href="#">abc.pdf</a>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table table-hover table-bordered text-center" style="margin-bottom: 0;">
+                            <tr class="success">
+                                <td colspan="6"><strong>业务对接单位</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>序号</strong></td>
+                                <td colspan="2"><strong>业务对接单位</strong></td>
+                                <td><strong>业务对接人</strong></td>
+                                <td colspan="2"><strong>联系方式</strong></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td colspan="2">北京中恒远策信息咨询有限公司</td>
+                                <td>金香淑</td>
+                                <td colspan="2">电话：010-65661992; 邮箱：topbrain@188.com</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td colspan="2">北京中恒远策信息咨询有限公司</td>
+                                <td>金香淑</td>
+                                <td colspan="2">电话：010-65661992; 邮箱：topbrain@188.com</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="3"><strong>节点：<br/>产业规划计划图及简要说明</strong></td>
+                    <td colspan="3"><strong>计划图</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--时间轴-->
+                        <div id="timeline">
+                            <ul id="dates">
+                                <li>
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-title">1集团立项</div>
+                                    <div class="timeline-content">
+                                        预:<br>实：2016-11-04
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!--时间轴-->
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding: 0;">
+                        <table class="table table-hover table-bordered text-center" style="margin-bottom: 0;">
+                            <tr class="success">
+                                <td colspan="6"><strong>工作进展</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>序号</strong></td>
+                                <td><strong>填写时间</strong></td>
+                                <td><strong>姓名</strong></td>
+                                <td colspan="2"><strong>进展描述</strong></td>
+                                <td><strong>状态</strong></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2018-06-08</td>
+                                <td>李四</td>
+                                <td colspan="2">完成终稿</td>
+                                <td>成果</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2018-06-08</td>
+                                <td>李四</td>
+                                <td colspan="2">完成终稿</td>
+                                <td>成果</td>
+                            </tr>
+                            <tr class="success">
+                                <td colspan="6"><strong>存在问题</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>序号</strong></td>
+                                <td><strong>填写时间</strong></td>
+                                <td><strong>姓名</strong></td>
+                                <td><strong>问题描述</strong></td>
+                                <td><strong>解决方案</strong></td>
+                                <td><strong>状态</strong></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2018-06-08</td>
+                                <td>李四</td>
+                                <td>测试</td>
+                                <td>测试</td>
+                                <td>未解决</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2018-06-08</td>
+                                <td>李四</td>
+                                <td>测试</td>
+                                <td>测试</td>
+                                <td>未解决</td>
+                            </tr>
+                        </table>
+                        <table class="table table-hover table-bordered text-center" style="margin-bottom: 0;">
+                            <tr>
+                                <td rowspan="3"><strong>相关文件</strong></td>
+                                <td><strong>内部文件</strong></td>
+                                <td colspan="2"></td>
+                                <td><strong>外部文件</strong></td>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>上传人</strong></td>
+                                <td><strong>上传时间</strong></td>
+                                <td><strong>附件</strong></td>
+                                <td><strong>上传人</strong></td>
+                                <td><strong>上传时间</strong></td>
+                                <td><strong>附件</strong></td>
+                            </tr>
+                            <tr>
+                                <td>张三</td>
+                                <td>2018-06-15</td>
+                                <td>
+                                    <a href="#">abc.pdf</a>
+                                </td>
+                                <td>李四</td>
+                                <td>2018-06-15</td>
+                                <td>
+                                    <a href="#">abc.pdf</a>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table table-hover table-bordered text-center" style="margin-bottom: 0;">
+                            <tr class="success">
+                                <td colspan="6"><strong>业务对接单位</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>序号</strong></td>
+                                <td colspan="2"><strong>业务对接单位</strong></td>
+                                <td><strong>业务对接人</strong></td>
+                                <td colspan="2"><strong>联系方式</strong></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td colspan="2">北京中恒远策信息咨询有限公司</td>
+                                <td>金香淑</td>
+                                <td colspan="2">电话：010-65661992; 邮箱：topbrain@188.com</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td colspan="2">北京中恒远策信息咨询有限公司</td>
+                                <td>金香淑</td>
+                                <td colspan="2">电话：010-65661992; 邮箱：topbrain@188.com</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <div class="text-center">
+                <a href="project-manage.html" class="btn btn-primary">返回</a>
             </div>
         </div>
-
     </div>
 
+</div>
 
 
-    <!-- 全局js -->
-    <script src="js/jquery.min.js?v=2.1.4"></script>
-    <script src="js/bootstrap.min.js?v=3.3.6"></script>
-    <!-- dataTables -->
-    <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
-    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
-    <!-- 自定义js -->
-    <script src="js/content.js?v=1.0.0"></script>
-    <script src="js/contabs-sub.js"></script>
+<!-- 全局js -->
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+<!-- dataTables -->
+<script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+<!-- timelinr -->
+<script src="js/plugins/swiper/swiper-3.4.2.jquery.min.js"></script>
+<!-- 自定义js -->
+<script src="js/content.js?v=1.0.0"></script>
+<script src="js/contabs-sub.js"></script>
 
-    <script>
-        $(document).ready(function () {
+<script>
+    $(document).ready(function () {
 
-            $('.del-btn').click(function () {
-                parent.layer.confirm('确定删除这条记录吗？', {
-                    title: '确定删除',
-                    btn: ['确定','取消'], //按钮
-                    shade: false //不显示遮罩
-                }, function(){
-                    parent.layer.msg('删除成功', {icon: 1});
-                }, function(){
-                    console.log('取消')
-                });
-            })
-
-            $("#sample-table").dataTable({
-                'ordering': false,
-                'searching': false,
-                'autoWidth': true
-            });
-
+        $("#sample-table").dataTable({
+            'ordering': false,
+            'searching': false,
+            'autoWidth': true
         });
-    </script>
+        var mySwiper = new Swiper ('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 0,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
+
+        })
+
+
+    });
+</script>
 
 </body>
 
