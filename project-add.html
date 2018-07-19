@@ -46,15 +46,17 @@
                         <table class="table table-hover table-bordered text-center">
                             <tr>
                                 <td><strong>审批意见列表</strong></td>
-                                <td>孟加拉吉大港中国经济工业园区项目工作进展情况</td>
+                                <td>
+                                    <input type="text" class="form-control" value="孟加拉吉大港中国经济工业园区项目工作进展情况"></td>
                                 <td><strong>项目英文名称</strong></td>
-                                <td>Chinese Economic and Industrial Zone, Chittagong, Bangladesh</td>
+                                <td>
+                                    <input type="text" class="form-control" value="Chinese Economic and Industrial Zone, Chittagong, Bangladesh"></td></td>
                             </tr>
                             <tr>
                                 <td><strong>项目编号</strong></td>
-                                <td>BD-IP-02-2015</td>
+                                <td><input type="text" class="form-control" value="BD-IP-02-2015"></td>
                                 <td><strong>入库建档时间</strong></td>
-                                <td>2015-05</td>
+                                <td><input type="text" class="form-control datetimepicker2" placeholder="请选择时间"></td>
                             </tr>
                             <tr>
                                 <td><strong>项目状态</strong></td>
@@ -88,39 +90,63 @@
                             </tr>
                             <tr>
                                 <td><strong>所在国家</strong></td>
-                                <td>孟加拉</td>
+                                <td>
+                                    <input type="text" class="form-control" value="孟加拉">
+                                </td>
                                 <td><strong>总投资额</strong></td>
-                                <td>20,000万美元</td>
+                                <td>
+                                    <input type="text" class="form-control" value="20,000万美元">
+                                </td>
                             </tr>
                             <tr>
                                 <td><strong>中港资本金出资额</strong></td>
-                                <td>10,000万美元</td>
+                                <td>
+                                    <input type="text" class="form-control" value="10,000万美元">
+                                </td>
                                 <td><strong>中港股比</strong></td>
-                                <td>30%</td>
+                                <td>
+                                    <input type="text" class="form-control" value="30%">
+                                </td>
                             </tr>
                             <tr>
                                 <td><strong>项目预计IRR</strong></td>
-                                <td>9.70%</td>
+                                <td>
+                                    <input type="text" class="form-control" value="9.70%">
+                                </td>
                                 <td><strong>资本金预计IRR</strong></td>
-                                <td>12%</td>
+                                <td>
+                                    <input type="text" class="form-control" value="12%">
+                                </td>
                             </tr>
                             <tr>
                                 <td><strong>项目动态回收期</strong></td>
-                                <td>3年</td>
+                                <td>
+                                    <input type="text" class="form-control" value="3年">
+                                </td>
                                 <td><strong>项目静态回收期</strong></td>
-                                <td>3年</td>
+                                <td>
+                                    <input type="text" class="form-control" value="3年">
+                                    </td>
                             </tr>
                             <tr>
                                 <td><strong>资本金动态回收期</strong></td>
-                                <td>3年</td>
+                                <td>
+                                    <input type="text" class="form-control" value="3年">
+                                </td>
                                 <td><strong>资本金静态回收期</strong></td>
-                                <td>3年</td>
+                                <td>
+                                    <input type="text" class="form-control" value="3年">
+                                </td>
                             </tr>
                             <tr>
                                 <td><strong>项目净现值</strong></td>
-                                <td>10,000万美元</td>
+                                <td>
+                                    <input type="text" class="form-control" value="10,000万美元">
+                                </td>
                                 <td><strong>折现率</strong></td>
-                                <td>9%</td>
+                                <td>
+                                    <input type="text" class="form-control" value="9%">
+                                </td>
                             </tr>
                             <tr>
                                 <td><strong>项目阶段</strong></td>
@@ -166,11 +192,12 @@
                             </tr>
                             <tr>
                                 <td><strong>确定重点跟踪项目时间</strong></td>
-                                <td>
-                                    2018-01-01
-                                    <i class="fa fa-calendar"></i>
+                                <td class="form-inline">
+                                    <input type="text" class="form-control datetimepicker2" style="width: 100px;" placeholder="请选择时间">
                                     附件：
-                                    <button class="btn btn-primary btn-xs">上传</button>
+                                    <button class="btn btn-primary btn-xs" type="button" onclick="$('input[id=lefile]').click();">上传</button>
+                                    <input id="lefile" type="file" style="display:none">
+
                                     <button class="btn btn-danger btn-xs">删除</button>
                                     <a href="#">abc.pdf</a>
                                 </td>
@@ -187,11 +214,12 @@
                             </tr>
                             <tr>
                                 <td><strong>港湾立项时间</strong></td>
-                                <td>
-                                    2018-01-01
-                                    <i class="fa fa-calendar"></i>
+                                <td class="form-inline">
+                                    <input type="text" class="form-control datetimepicker2" style="width: 100px;" placeholder="请选择时间">
                                     附件：
-                                    <button class="btn btn-primary btn-xs">上传</button>
+                                    <button class="btn btn-primary btn-xs" type="button" onclick="$('input[id=lefile2]').click();">上传</button>
+                                    <input id="lefile2" type="file" style="display:none">
+
                                     <button class="btn btn-danger btn-xs">删除</button>
                                     <a href="#">abc.pdf</a>
                                 </td>
@@ -200,20 +228,22 @@
                             </tr>
                             <tr>
                                 <td><strong>港湾决策时间</strong></td>
-                                <td>
-                                    2018-01-01
-                                    <i class="fa fa-calendar"></i>
+                                <td class="form-inline">
+                                    <input type="text" class="form-control datetimepicker2" style="width: 100px;" placeholder="请选择时间">
                                     附件：
-                                    <button class="btn btn-primary btn-xs">上传</button>
+                                    <button class="btn btn-primary btn-xs" type="button" onclick="$('input[id=lefile3]').click();">上传</button>
+                                    <input id="lefile3" type="file" style="display:none">
+
                                     <button class="btn btn-danger btn-xs">删除</button>
                                     <a href="#">abc.pdf</a>
                                 </td>
                                 <td><strong>集团决策时间</strong></td>
-                                <td>
-                                    2018-01-01
-                                    <i class="fa fa-calendar"></i>
+                                <td class="form-inline">
+                                    <input type="text" class="form-control datetimepicker2" style="width: 100px;" placeholder="请选择时间">
                                     附件：
-                                    <button class="btn btn-primary btn-xs">上传</button>
+                                    <button class="btn btn-primary btn-xs" type="button" onclick="$('input[id=lefile4]').click();">上传</button>
+                                    <input id="lefile4" type="file" style="display:none">
+
                                     <button class="btn btn-danger btn-xs">删除</button>
                                     <a href="#">abc.pdf</a>
                                 </td>
@@ -226,51 +256,58 @@
                             </tr>
                             <tr>
                                 <td><strong>商务部</strong></td>
-                                <td>2018-01-01</td>
+                                <td><input type="text" class="form-control datetimepicker2" placeholder="请选择时间"></td>
                                 <td>
-                                    <button class="btn btn-primary btn-xs">上传</button>
+                                    <button class="btn btn-primary btn-xs" type="button" onclick="$('input[id=lefile5]').click();">上传</button>
+                                    <input id="lefile5" type="file" style="display:none">
+
                                     <button class="btn btn-danger btn-xs">删除</button>
                                     <a href="#">商务部.pdf</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td><strong>国资委</strong></td>
-                                <td>2018-01-01</td>
+                                <td><input type="text" class="form-control datetimepicker2" placeholder="请选择时间"></td>
                                 <td>
-                                    <button class="btn btn-primary btn-xs">上传</button>
+                                    <button class="btn btn-primary btn-xs" type="button" onclick="$('input[id=lefile6]').click();">上传</button>
+                                    <input id="lefile6" type="file" style="display:none">
+
                                     <button class="btn btn-danger btn-xs">删除</button>
                                     <a href="#">商务部.pdf</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td><strong>发改委</strong></td>
-                                <td>2018-01-01</td>
+                                <td><input type="text" class="form-control datetimepicker2" placeholder="请选择时间"></td>
                                 <td>
-                                    <button class="btn btn-primary btn-xs">上传</button>
+                                    <button class="btn btn-primary btn-xs" type="button" onclick="$('input[id=lefile7]').click();">上传</button>
+                                    <input id="lefile7" type="file" style="display:none">
+
                                     <button class="btn btn-danger btn-xs">删除</button>
                                     <a href="#">商务部.pdf</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td><strong>外管局</strong></td>
-                                <td>2018-01-01</td>
+                                <td><input type="text" class="form-control datetimepicker2" placeholder="请选择时间"></td>
                                 <td>
-                                    <button class="btn btn-primary btn-xs">上传</button>
+                                    <button class="btn btn-primary btn-xs" type="button" onclick="$('input[id=lefile8]').click();">上传</button>
+                                    <input id="lefile8" type="file" style="display:none">
+
                                     <button class="btn btn-danger btn-xs">删除</button>
                                     <a href="#">商务部.pdf</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td><strong>项目概要</strong></td>
-                                <td colspan="3" class="text-left">项目位于吉大港卡拉夫利河南岸地区，临近韩国工业园区。距离吉大港20公里。规划面积313公顷，定位为中国企业在当地专属的轻工业园区。</td>
+                                <td colspan="3" class="text-left">
+                                    <textarea class="form-control" rows="3">项目位于吉大港卡拉夫利河南岸地区，临近韩国工业园区。距离吉大港20公里。规划面积313公顷，定位为中国企业在当地专属的轻工业园区。</textarea></td>
                             </tr>
                             <tr>
                                 <td><strong>其它信息</strong></td>
                                 <td colspan="3" class="text-left">
-                                    <h4>部委报备报批要求：</h4>
-                                    <p>发改委：报备（根据《》第X条：XXX）<br>
-                                        商务部：报批（根据《》第X条：XXX）<br>
-                                        国资委：报批（根据《》第X条：XXX）</p>
+                                    <textarea class="form-control" rows="3">发改委：报备（根据《》第X条：XXX）商务部：报批（根据《》第X条：XXX）国资委：报批（根据《》第X条：XXX）
+                                    </textarea>
                                 </td>
                             </tr>
                         </table>
@@ -346,13 +383,22 @@
     <script src="js/content.js?v=1.0.0"></script>
     <script src="js/contabs-sub.js"></script>
     <script src="js/plugins/layer/layer.min.js"></script>
+
+    <!-- Data picker -->
+    <script src="js/plugins/datetimepicker/datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/plugins/datetimepicker/datetimepicker.zh-CN.js" charset="UTF-8"></script>
     <script>
         $(document).ready(function () {
             $('.save-btn').click(function () {
                 layer.msg('保存成功');
             })
-
-
+            $('.datetimepicker2').datetimepicker({
+                format: 'yyyy-mm-dd',
+                autoclose:true,
+                todayBtn:'linked',
+                language:'zh-CN',
+                minView:2
+            })
         });
     </script>
 
